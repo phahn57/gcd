@@ -1,4 +1,4 @@
-make_tidy<-function(){
+run_analysis<-function(){
   library(stringr)
   library(reshape2)
   ## Reading features
@@ -55,6 +55,6 @@ make_tidy<-function(){
                 ## building resulting dataframe
                 molten<-melt(data_total2, id.vars=c("subject","activity"))
                 result<- dcast(molten,subject+activity~variable,mean)
-                   
+                ## write.table(result,file="run_analysis.txt",row.names=FALSE)   
     
 }
