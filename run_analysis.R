@@ -56,5 +56,5 @@ run_analysis<-function(){
                 molten<-melt(data_total2, id.vars=c("subject","activity"))
                 result<- dcast(molten,subject+activity~variable,mean)
                 ## write.table(result,file="run_analysis.txt",row.names=FALSE)   
-    
+          result      
 }
